@@ -88,13 +88,15 @@ var finances = [
 ];
 
 //CALCULATE: Total amount of months included in the dataset
-
-
+TotalMonths = finances.length
 //CALCULATE: Net total amount of profit/losses over the entire period
+sum = 
 
 //CALCULATE: The average of the changes in profit/losses over the entire period
     //HINT: Need to track what the total change in profits is from month to month and then find average
     //HINT: Total/Number of months
+
+    
 
 //CALCULATE: The greatest increase in profits (date and amount) over the entire period
 
