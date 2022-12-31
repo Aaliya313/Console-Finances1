@@ -95,7 +95,7 @@ console.log(TotalMonths);
 //TASK 2: CALCULATE: Net total amount of profit/losses over the entire period
 NumberValuesOnly = finances.filter(Number); //want to filter the array to only work with the number type, using filter method can do so to only select those values
 console.log(NumberValuesOnly); //display the correct data to check
-    function ProfitandLosses (NumberValuesOnly) {
+    function ProfitandLosses (NumberValuesOnly) { //function to only add the numbers together
     {
         return NumberValuesOnly.reduce((accumulator, value) => {
             return accumulator + value;
@@ -103,7 +103,7 @@ console.log(NumberValuesOnly); //display the correct data to check
     }
  }
 
- const netAmountResult = ProfitandLosses(NumberValuesOnly);
+ const netAmountResult = ProfitandLosses(NumberValuesOnly); //print out the result
  console.log(netAmountResult);
 
  
