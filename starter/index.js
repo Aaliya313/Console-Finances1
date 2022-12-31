@@ -87,18 +87,35 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-//CALCULATE: Total amount of months included in the dataset
-TotalMonths = finances.length
-//CALCULATE: Net total amount of profit/losses over the entire period
-sum = 
 
-//CALCULATE: The average of the changes in profit/losses over the entire period
+//TASK1: CALCULATE: Total amount of months included in the dataset
+TotalMonths = finances.length
+console.log(TotalMonths);
+
+//TASK 2: CALCULATE: Net total amount of profit/losses over the entire period
+NumberValuesOnly = finances.filter(Number); //want to filter the array to only work with the number type, using filter method can do so to only select those values
+console.log(NumberValuesOnly); //display the correct data to check
+    function ProfitandLosses (NumberValuesOnly) {
+    {
+        return NumberValuesOnly.reduce((accumulator, value) => {
+            return accumulator + value;
+        }, 0);
+    }
+ }
+
+ const netAmountResult = ProfitandLosses(NumberValuesOnly);
+ console.log(netAmountResult);
+
+ 
+
+
+//TASK 3: CALCULATE: The average of the changes in profit/losses over the entire period
     //HINT: Need to track what the total change in profits is from month to month and then find average
     //HINT: Total/Number of months
 
     
 
-//CALCULATE: The greatest increase in profits (date and amount) over the entire period
+//TASK 4: CALCULATE: The greatest increase in profits (date and amount) over the entire period
 
 
-//CALCULATE: The greatest decrease in losess (date and amount) over the entire period
+//TASK 5: CALCULATE: The greatest decrease in losess (date and amount) over the entire period
