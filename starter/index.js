@@ -92,29 +92,31 @@ var finances = [
 TotalMonths = finances.length
 console.log(TotalMonths);
 
+
+
 //TASK 2: CALCULATE: Net total amount of profit/losses over the entire period
-var sum = 0;
-for (let i = 0; i < finances.length; i++) {
-    NumbersOnly = (finances[i] [1]); 
+var netTotalAmount = 0;
+for (let i = 0; i < finances.length; i++) { //Iterates through finances array
+    NumbersDataOnly = (finances[i] [1]);  //Only selects the number type in the array
     //console.log(NumbersOnly); //check working with the correct values
-    sum = sum + NumbersOnly;
+    netTotalAmount = netTotalAmount + NumbersDataOnly; //Sums the iterated inner array with the numbers
 }
-console.log(sum);
+console.log(netTotalAmount); //prints out the net total amount
+
+
     
 //TASK 3: CALCULATE: The average of the changes in profit/losses over the entire period
     //HINT: Need to track what the total change in profits is from month to month and then find average
     //HINT: Total/Number of months
    
     TotalMonthlyDifferences = 0;
-    
     for (let i = 0; i < finances.length - 1; i++) {
         TotalMonthlyDifferences = TotalMonthlyDifferences + ((finances [i+1][1]) - (finances[i][1])); 
         console.log(TotalMonthlyDifferences);
         console.log((finances [i+1][1]) - (finances[i][1]));
 };
-
-average = TotalMonthlyDifferences/(TotalMonths-1);
-console.log(average);
+Average = TotalMonthlyDifferences/(TotalMonths-1);
+console.log(Average);
 
     
 
@@ -132,6 +134,8 @@ for (let i = 0; i < finances.length - 1; i++) {
 };
 console.log(finances[indexOfGreatestProfit][0]);
 console.log(greatestIncreaseInProfits);
+
+
 
 //TASK 5: CALCULATE: The greatest decrease in losess (date and amount) over the entire period
 
