@@ -104,6 +104,25 @@ console.log(sum);
 //TASK 3: CALCULATE: The average of the changes in profit/losses over the entire period
     //HINT: Need to track what the total change in profits is from month to month and then find average
     //HINT: Total/Number of months
+    //Fibonacci sequence
+    // var addition = 0;
+    // for (let i = 0; i < finances.length; i++) {
+    //     NumbersOnly = (finances[i] [1]); 
+    
+    //     addition[NumbersOnly] =  
+    // }
+
+    NumbersOnly = (finances[i] [1]);
+    const twiceSum = NumbersOnly => {
+        const res = [];
+        for (let i = 0; i < NumbersOnly.length; i += 2) {
+            res.push(NumbersOnly[i] + (NumbersOnly[i+1] || 0));
+        };
+        return res;
+    };
+    console.log(twiceSum(NumbersOnly))
+
+
     
     
 
