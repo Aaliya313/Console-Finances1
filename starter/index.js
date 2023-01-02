@@ -104,29 +104,46 @@ console.log(sum);
 //TASK 3: CALCULATE: The average of the changes in profit/losses over the entire period
     //HINT: Need to track what the total change in profits is from month to month and then find average
     //HINT: Total/Number of months
-    //Fibonacci sequence
-    // var addition = 0;
-    // for (let i = 0; i < finances.length; i++) {
-    //     NumbersOnly = (finances[i] [1]); 
+   
+    TotalMonthlyDifferences = 0;
     
-    //     addition[NumbersOnly] =  
-    // }
+    for (let i = 0; i < finances.length - 1; i++) {
+        TotalMonthlyDifferences = TotalMonthlyDifferences + ((finances [i+1][1]) - (finances[i][1])); 
+        console.log(TotalMonthlyDifferences);
+        console.log((finances [i+1][1]) - (finances[i][1]));
+};
 
-    NumbersOnly = (finances[i] [1]);
-    const twiceSum = NumbersOnly => {
-        const res = [];
-        for (let i = 0; i < NumbersOnly.length; i += 2) {
-            res.push(NumbersOnly[i] + (NumbersOnly[i+1] || 0));
-        };
-        return res;
-    };
-    console.log(twiceSum(NumbersOnly))
+average = TotalMonthlyDifferences/(TotalMonths-1);
+console.log(average);
 
-
-    
     
 
 //TASK 4: CALCULATE: The greatest increase in profits (date and amount) over the entire period
 
+greatestIncreaseInProfits = 0;
+indexOfGreatestProfit = 0;
+for (let i = 0; i < finances.length - 1; i++) {
+    currentGreatestIncreaseInProfits = ((finances [i+1][1]) - (finances[i][1])); 
+    if (currentGreatestIncreaseInProfits > greatestIncreaseInProfits) {
+        greatestIncreaseInProfits = currentGreatestIncreaseInProfits;
+        indexOfGreatestProfit = i+1;
+    }
+
+};
+console.log(finances[indexOfGreatestProfit][0]);
+console.log(greatestIncreaseInProfits);
 
 //TASK 5: CALCULATE: The greatest decrease in losess (date and amount) over the entire period
+
+greatestDecreaseInProfits = 0;
+indexOfGreatestProfit = 0;
+for (let i = 0; i < finances.length - 1; i++) {
+    currentGreatestDecreaseInProfits = ((finances [i+1][1]) - (finances[i][1])); 
+    if (currentGreatestDecreaseInProfits <  greatestDecreaseInProfits) {
+        greatestDecreaseInProfits = currentGreatestDecreaseInProfits;
+        indexOfGreatestProfit = i+1;
+    }
+
+};
+console.log(finances[indexOfGreatestProfit][0]);
+console.log(greatestDecreaseInProfits);
