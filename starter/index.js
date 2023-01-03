@@ -89,8 +89,8 @@ var finances = [
 
 
 //TASK 1: CALCULATE: Total amount of months included in the dataset
-TotalMonths = finances.length
-console.log(TotalMonths);
+TotalMonths = finances.length //Length of the whole array to give the number of months displayed in the array in total
+console.log(TotalMonths); //output in the console
 
 
 
@@ -101,7 +101,7 @@ for (let i = 0; i < finances.length; i++) { //Iterates through finances array
     //console.log(NumbersOnly); //check working with the correct values
     netTotalAmount = netTotalAmount + NumbersDataOnly; //Sums the iterated inner array with the numbers
 }
-console.log(netTotalAmount); //prints out the net total amount
+console.log(netTotalAmount); //Output of the net total amount in the console
 
 
     
@@ -109,24 +109,26 @@ console.log(netTotalAmount); //prints out the net total amount
     //HINT: Need to track what the total change in profits is from month to month and then find average
     //HINT: Total/Number of months
    
-    TotalMonthlyDifferences = 0;
-    for (let i = 0; i < finances.length - 1; i++) {
-        TotalMonthlyDifferences = TotalMonthlyDifferences + ((finances [i+1][1]) - (finances[i][1])); 
-        console.log(TotalMonthlyDifferences);
-        console.log((finances [i+1][1]) - (finances[i][1]));
+    TotalMonthlyDifferences = 0; //Initialise variable
+    for (let i = 0; i < finances.length - 1; i++) { //For loop to iterate through the array. Need to have finances.length - 1 so when it gets to the end it doesn't crash
+        TotalMonthlyDifferences = TotalMonthlyDifferences + ((finances [i+1][1]) - (finances[i][1])); //Output is the total of the changes in profits/losses over entire period (month to month)
+        /* This is commented out and kept to show my 'working out' as I wanted to check that the desired output printed
+        console.log(TotalMonthlyDifferences); 
+        console.log((finances [i+1][1]) - (finances[i][1])); 
+        */
 };
-Average = TotalMonthlyDifferences/(TotalMonths-1);
-console.log(Average);
+Average = TotalMonthlyDifferences/(TotalMonths-1); //Calculating the average 
+console.log(Average); //Output to the console
 
     
 
 //TASK 4: CALCULATE: The greatest increase in profits (date and amount) over the entire period
 
-greatestIncreaseInProfits = 0;
-indexOfGreatestProfit = 0;
-for (let i = 0; i < finances.length - 1; i++) {
+greatestIncreaseInProfits = 0;  //Initialise variable
+indexOfGreatestProfit = 0; // Initialise variable
+for (let i = 0; i < finances.length - 1; i++) { //For loop to iterate through the array. Need to have finances.length - 1 so when it gets to the end it doesn't crash
     currentGreatestIncreaseInProfits = ((finances [i+1][1]) - (finances[i][1])); 
-    if (currentGreatestIncreaseInProfits > greatestIncreaseInProfits) {
+    if (currentGreatestIncreaseInProfits > greatestIncreaseInProfits) { // if statement 
         greatestIncreaseInProfits = currentGreatestIncreaseInProfits;
         indexOfGreatestProfit = i+1;
     }
@@ -143,7 +145,7 @@ greatestDecreaseInProfits = 0;
 indexOfGreatestProfit = 0;
 for (let i = 0; i < finances.length - 1; i++) {
     currentGreatestDecreaseInProfits = ((finances [i+1][1]) - (finances[i][1])); 
-    if (currentGreatestDecreaseInProfits <  greatestDecreaseInProfits) {
+    if (currentGreatestDecreaseInProfits <  greatestDecreaseInProfits) { //if statement 
         greatestDecreaseInProfits = currentGreatestDecreaseInProfits;
         indexOfGreatestProfit = i+1;
     }
